@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ticket.css') }}">
+    </head>
+    <body>
+    <div class='ticket'>
+        <h2 id='logo'>감성티켓<h2>
+        <p id ='smalltxt'>{{ Thistime }}</p>
+        <div id='movieinfo'>
+        <h2>{{ video_title }}({{ platform }})</h2>
+        <p>방구석 A열</p>
+        <p>총 {{ people }}명</p>
+        </div>
+        <p id ='smalltxt'>==================================================</p>
+        <p id = 'smalltxt'>태그 하기</p>
+        <p id ='smalltxt'>==================================================</p>
+        <div id = 'brandbox'>
+            <p>누울자리와</p>    
+            <p>화면만 있다면</p>    
+            <p>그곳이 영화관인데</p>    
+            <p>나갈 필요가 있나요?</p>    
+        </div>
+        <p id ='smalltxt'>==================================================</p>
+        <p id ='smalltxt'>Gamseongticket.</p>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    </head>
+    <body>
+        <h1 id='logo'>감성티켓</h1>
+        <div class = 'intro'>
+            <h3>21세기에 날아온 감성티켓</h3>
+            <h4>원하는 영상을 정사각형 티켓으로...</h4>
+        </div>
+        <form class = 'inputform' method="POST" action="/maketicket">
+            <h2>만들기</h1>
+            <p>영상제목</p>
+            <input type="text" class ="form-control" name = 'video-title'>
+            <p>플랫폼(유투브, 넷플릭스 등...)</p>
+            <input type="text" class ="form-control" name = 'platform'>
+            <p>총 인원</p>
+            <input type="text" class ="form-control" name ='people'>
+            <button type="submit">만들기</button>
+        </div>  
+    </body>
+</html>

@@ -1,0 +1,23 @@
+    @font-face { font-family: 'DungGeunMo'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff'); 
+        font-weight: normal; 
+        font-style: normal; }
+        @font-face { font-family: 'MiraeroNormal'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/MiraeroNormal.woff') format('woff'); 
+        font-weight: normal; 
+        font-style: normal; }
+        @font-face { font-family: 'DOSGothic'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff'); 
+        font-weight: normal; 
+        font-style: normal; }
+        #logo{
+            font-family: 'MiraeroNormal';
+            text-align: center;
+        }
+        .intro{
+            font-family: 'MiraeroNormal';
+            text-align: center;
+        }
+        .inputform{
+            font-family: 'MiraeroNormal';
+    }
