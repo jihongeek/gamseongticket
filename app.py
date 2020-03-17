@@ -4,6 +4,7 @@ import datetime
 import re
 import io
 import os
+import imgkit
 app = Flask(__name__)
 
 @app.route('/')
@@ -20,8 +21,9 @@ def maketicket():
     platform = request.form['platform']
     people = request.form['people']
     place = request.form['place']
-    cssfile = open("static/styles/ticket.css","r")
+    cssfile = open("static/styles/ticket_retro.css","r")
     cssstr = "<style>\n" + cssfile.read() + "\n</style>\n"
+    
     html_output = render_template(
             'ticket.html',
             Thistime=Thistime,
@@ -30,10 +32,22 @@ def maketicket():
             people=people,
             place=place
             ) 
-    with open("imgmaking/htmlforimg/%s_%d.html"
-    %(str(Thistime)[:11],
-    len(os.listdir("imgmaking/htmlforimg"))+1),"w",
-    encoding="UTF-8") as f:
+
+    filename = r"\%s_%d"%(str(Thistime)[:11],
+    len(os.listdir("imgmaking/htmlforimg"))+1)
+    with open("imgmaking/htmlforimg/"+filename+".html","w",encoding="UTF-8") as f:
         f.write(cssstr + html_output)
+
+    path_wkthmltoimage = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe"
+    config = imgkit.config(wkhtmltoimage=path_wkthmltoimage)
+    options = {
+        'format': 'png',
+        'quality':'100',
+        'encoding':"UTF-8",
+        'crop-h':'500',
+        'crop-w':'500',
+        }
+    imgkit.from_file(r"C:\develop\gamseongticket\imgmaking\htmlforimg"+filename+".html",
+    r"C:\develop\gamseongticket\imgmaking\imgs"+filename+".png",config=config,options=options,)
     return cssstr + html_output
 app.run(debug=True)
