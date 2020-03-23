@@ -49,5 +49,8 @@ def maketicket():
         }
     imgkit.from_file(r"C:\develop\gamseongticket\imgmaking\htmlforimg"+filename+".html",
     r"C:\develop\gamseongticket\imgmaking\imgs"+filename+".png",config=config,options=options,)
-    return cssstr + html_output
+    return  send_file(r"C:\develop\gamseongticket\imgmaking\imgs"+filename+".png",
+                     mimetype='image/png',
+                     attachment_filename=filename[1:]+".png",# 다운받아지는 파일 이름. 
+                     as_attachment=True)
 app.run(debug=True)
