@@ -21,7 +21,8 @@ def maketicket():
     platform = request.form['platform']
     people = request.form['people']
     place = request.form['place']
-    cssfile = open("static/styles/ticket_retro.css","r")
+    theme = request.form['theme']
+    cssfile = open("static/styles/%s.css"%theme,"r")
     cssstr = "<style>\n" + cssfile.read() + "\n</style>\n"
     
     html_output = render_template(
