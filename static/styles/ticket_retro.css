@@ -18,7 +18,7 @@
         width: 500px; height: 500px;
         font-family: 'MiraeroNormal';
         background-color: rgb(2, 28, 179);
-        color:rgb(255, 255, 255);
+        color:rgb(228, 228, 228);
         line-height : 70%;
         word-break:break-all;
         }
@@ -38,7 +38,7 @@
         .ticket #movieinfo{
             font-family: 'DungGeunMo';
             line-height: 35%;
-            text-shadow: 3.5px 2px #5dccff;
+            text-shadow: 3.5px 2px #5de7ff;
         }
         
         .ticket #midtext{
