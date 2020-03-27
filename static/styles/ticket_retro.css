@@ -17,8 +17,8 @@
  .ticket{
         width: 500px; height: 500px;
         font-family: 'MiraeroNormal';
-        background-color: rgb(0, 31, 209);
-        color:rgb(196, 196, 196);
+        background-color: rgb(2, 28, 179);
+        color:rgb(255, 255, 255);
         line-height : 70%;
         word-break:break-all;
         }
@@ -28,18 +28,17 @@
             text-align: center;
             line-height: 200%;
             color: #ffe240;
-            text-shadow: 0.2px 0.2px #ff8ff6, 4px 4px 0px #ff57cd;
+            text-shadow: 2.5px 2.25px #ff57cd;
         }
         
         #line{
             font-family: 'MiraeroNormal';
             font-size: 20px;
         }
-        
         .ticket #movieinfo{
             font-family: 'DungGeunMo';
             line-height: 35%;
-            text-shadow: 0px 1px #73ffe1, 4px 4px 0px #5dccff;
+            text-shadow: 3.5px 2px #5dccff;
         }
         
         .ticket #midtext{
