@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/template.css') }}">
@@ -9,6 +10,7 @@
             <h3>21세기에 날아온 감성티켓</h3>
             <h4>원하는 영상을 정사각형 티켓으로...</h4>
         </div>
+        <div>
         <form class = 'inputform' method="POST" action="/maketicket">
             <h2>만들기</h1>
             <p>영상제목</p>
@@ -22,7 +24,6 @@
             <p>테마</p>
             <label><input type="radio" name="theme" value="ticket_retro" checked>레트로 테마</label>
             <label><input type="radio" name="theme" value="ticket_hand">손글씨 테마</label>
-
             <button type="submit">만들기</button>
         </div>  
     </body>
