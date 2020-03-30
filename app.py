@@ -2,7 +2,6 @@
 from flask import Flask,render_template,request,send_file
 import datetime
 import re
-import io
 import os
 import imgkit
 app = Flask(__name__)
@@ -47,6 +46,7 @@ def maketicket():
         'encoding':"UTF-8",
         'crop-h':'500',
         'crop-w':'500',
+
         }
     imgkit.from_file(r"C:\develop\gamseongticket\imgmaking\htmlforimg"+filename+".html",
     r"C:\develop\gamseongticket\imgmaking\imgs"+filename+".png",config=config,options=options,)
