@@ -1,0 +1,59 @@
+        @font-face { 
+            font-family: 'UhBeeSe_hyun'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        @font-face { 
+            font-family: 'MiraeroNormal'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/MiraeroNormal.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        body{
+            margin: 0;
+            padding:0;
+        }
+        .ticket{
+        width: 500px; height: 500px;
+        font-family: 'UhBeeSe_hyun';
+        background-color: rgb(255, 230, 198);
+        color:rgb(0, 0, 0);
+        line-height : 70%;
+        word-break:break-all;
+        }
+        
+        #logo{
+            font-family: 'MiraeroNormal';
+            text-align: center;
+            line-height: 200%;
+        }
+        
+        #line{
+            font-family: 'MiraeroNormal';
+            font-size: 20px;
+        }
+        
+        .ticket #movieinfo{
+            font-family: 'UhBeeSe_hyun';
+            line-height: 35%;
+        }
+        
+        .ticket #midtext{
+            font-size: 20px;
+        }
+        
+        #footerlogo{
+            font-size: 20px;
+            font-family: 'MiraeroNormal';
+            text-align: center;
+        }
+        
+        .ticket #brandbox{
+            line-height: 175%;
+            color:rgb(255, 230, 198); 
+            font-size: 10px;
+            padding : 1%
+        }
+        
+        
