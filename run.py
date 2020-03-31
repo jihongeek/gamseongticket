@@ -4,11 +4,18 @@ import datetime
 import re
 import os
 import imgkit
+import glob
 app = Flask(__name__)
 
 @app.route('/')
 def main():
+    if len(os.listdir("imgmaking/htmlforimg")) >= 30:
+        for i in glob.glob("imgmaking/htmlforimg/*"): 
+            os.remove(i)
+        for i in glob.glob("imgmaking/imgs/*"):
+            os.remove(i)
     return render_template('template.html')
+
 
 @app.route('/maketicket',methods={'POST'})
 def maketicket():
