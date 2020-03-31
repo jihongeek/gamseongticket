@@ -3,6 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/template.css') }}">
+	<title>감성티켓</title>
     </head>
     <body>
         <h1 id='logo'>감성티켓</h1>
@@ -22,10 +23,10 @@
             <p>총 인원</p>
             <input type="text" class ="form-control" name ='people'>
             <p>테마</p>
-            <label><input type="radio" name="theme" value="ticket_hand_pink" checked>손글씨 테마(분홍)</label>
-            <label><input type="radio" name="theme" value="ticket_hand_orange">손글씨 테마(주황)</label>
-            <label><input type="radio" name="theme" value="ticket_hand_skyblue">손글씨 테마(하늘)</label>
-            <label><input type="radio" name="theme" value="ticket_retro">레트로 테마</label>
+            <label><input type="radio" name="theme" value="ticket_hand_pink" checked>손글씨 테마(분홍)</label><br>
+            <label><input type="radio" name="theme" value="ticket_hand_orange">손글씨 테마(주황)</label><br>
+            <label><input type="radio" name="theme" value="ticket_hand_skyblue">손글씨 테마(하늘)</label><br>
+            <label><input type="radio" name="theme" value="ticket_retro">레트로 테마</label><br><br>
             <button type="submit">만들기</button>
         </div>  
     </body>
