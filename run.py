@@ -46,9 +46,10 @@ def maketicket():
 
         }
     imgkit.from_file("/var/www/gamseongticket/imgmaking/htmlforimg"+filename+".html",
-    "/var/www/gamseongticket/imgmaking/imgs"+filename+".png",config=config,options=options,)
+    "/var/www/gamseongticket/imgmaking/imgs"+filename+".png",options=options,)
     return  send_file("imgmaking/imgs"+filename+".png",
                      mimetype='image/png',
                      attachment_filename=filename[1:]+".png",# 다운받아지는 파일 이름. 
                      as_attachment=True)
-app.run()
+if __name__ == "__main__":
+	app.run(host="0.0.0.0",port="5000")
