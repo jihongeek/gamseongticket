@@ -59,4 +59,4 @@ def maketicket():
                      attachment_filename=filename[1:]+".png",# 다운받아지는 파일 이름. 
                      as_attachment=True)
 if __name__ == "__main__":
-	app.run(host="0.0.0.0",port="5000")
+	app.run(host="0.0.0.0",port="80")
