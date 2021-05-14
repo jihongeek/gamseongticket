@@ -1,12 +1,12 @@
 #-*- coding: utf-8 -*-
 from flask import Flask,render_template,request,send_file
-import datetime
-import re
-import os
-import imgkit
-import glob
-app = Flask(__name__)
+import datetime, os, imgkit, glob, re, json
 
+
+with open('setting.json') as json_file:
+    setting_data = json.load(json_file)
+
+app = Flask(__name__)
 @app.route('/')
 def main():
     if len(os.listdir("imgmaking/htmlforimg")) >= 30:
@@ -52,8 +52,8 @@ def maketicket():
         'crop-w':'500',
 
         }
-    imgkit.from_file("/var/www/gamseongticket/imgmaking/htmlforimg"+filename+".html",
-    "/var/www/gamseongticket/imgmaking/imgs"+filename+".png",options=options,)
+    imgkit.from_file(setting_data['pathForImgkit']+"imgmaking/htmlforimg"+filename+".html",
+    setting_data['pathForImgkit']+"imgmaking/imgs"+filename+".png",options=options,)
     return  send_file("imgmaking/imgs"+filename+".png",
                      mimetype='image/png',
                      attachment_filename=filename[1:]+".png",# 다운받아지는 파일 이름. 
